@@ -1,0 +1,25 @@
+{
+  "name": "youtube-data-api",
+  "version": "0.0.1",
+  "description": "Lightweight youtube data api v3 wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:digitalsadhu/youtube-data-api.git"
+  },
+  "keywords": [
+    "youtube",
+    "api",
+    "data",
+    "v3"
+  ],
+  "author": "Richard Walker <digitalsadhu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digitalsadhu/youtube-data-api/issues"
+  },
+  "homepage": "https://github.com/digitalsadhu/youtube-data-api"
+}
