@@ -1,5 +1,5 @@
 {
-  "name": "youtube-data-api",
+  "name": "youtube-get",
   "version": "0.0.1",
   "description": "Lightweight youtube data api v3 wrapper",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:digitalsadhu/youtube-data-api.git"
+    "url": "git@github.com:digitalsadhu/youtube-get.git"
   },
   "keywords": [
     "youtube",
@@ -19,7 +19,10 @@
   "author": "Richard Walker <digitalsadhu@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/digitalsadhu/youtube-data-api/issues"
+    "url": "https://github.com/digitalsadhu/youtube-get/issues"
   },
-  "homepage": "https://github.com/digitalsadhu/youtube-data-api"
+  "homepage": "https://github.com/digitalsadhu/youtube-get",
+  "dependencies": {
+    "nets": "^1.0.0"
+  }
 }
