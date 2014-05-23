@@ -1,6 +1,6 @@
 'use strict';
 
-var request  = require('superagent')
+var request     = require('nets')
   , queryString = require('querystring')
 
 var constructYoutubeApiUrl = function (key, endpoint, params) {
@@ -10,14 +10,20 @@ var constructYoutubeApiUrl = function (key, endpoint, params) {
   return [baseUrl.join('/'), queryString.stringify(params)].join('?')
 }
 
-module.exports = function (YOUTUBE_API_KEY) {
+module.exports = function (youtubeApiKey) {
   return function (endpoint, params, cb) {
-    request
-      .get(constructYoutubeApiUrl(YOUTUBE_API_KEY, endpoint, params))
-      .type('application/json')
-      .accept('application/json')
-      .end(function (err, res) {
-        cb(err, res.body)
-      })
+    request({
+      url: constructYoutubeApiUrl(youtubeApiKey, endpoint, params),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    }, function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        cb(null, JSON.parse(body));
+      } else {
+        cb(error)
+      }
+    });
   }
 }
