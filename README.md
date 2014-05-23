@@ -16,8 +16,9 @@ based on an endpoint and params and returning you the result
 var youtubeDataApi = require('youtube-data-api')
 
 var myApiKey = 'something'
-
 var youtube = youtubeDataApi(myApiKey)
+//without api key is ok to for some requests
+//var youtube = youtubeDataApi()
 
 youtube('channels', {
     'part': 'id, snippet'

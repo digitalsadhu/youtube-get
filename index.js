@@ -5,7 +5,8 @@ var request  = require('superagent')
 
 var constructYoutubeApiUrl = function (key, endpoint, params) {
   var baseUrl = ['https://www.googleapis.com/youtube/v3', endpoint]
-  params.key = key
+  if (key)
+    params.key = key
   return [baseUrl.join('/'), queryString.stringify(params)].join('?')
 }
 
