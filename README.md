@@ -1,4 +1,4 @@
-youtube-data-api
+youtube-get
 ================
 
 Lightweight youtube data api v3 wrapper
@@ -13,12 +13,12 @@ based on an endpoint and params and returning you the result
 ## Usage
 
 ```js
-var youtubeDataApi = require('youtube-data-api')
+var youtubeGet = require('youtube-get')
 
 var myApiKey = 'something'
-var youtube = youtubeDataApi(myApiKey)
+var youtube = youtubeGet(myApiKey)
 //without api key is ok to for some requests
-//var youtube = youtubeDataApi()
+//var youtube = youtubeGet()
 
 youtube('channels', {
     'part': 'id, snippet'
